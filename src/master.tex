@@ -1,0 +1,98 @@
+% Master document %--Thesis
+%--Author: Lozada-Blanco Asdrubal
+%--the following is cc by-sa 3.0 with attribution required 
+
+%--this template includes the PPGQ/UFSCar bibliographic references format
+%--this template is adapted to portuguese language
+
+
+\documentclass[a4paper,12pt]{article}
+%--track & revision              
+ \usepackage{changes}
+% replace the option name with the surname of author and supervisor
+   \definechangesauthor[name={surname-author}, color=blue]{acronymus-author}
+   \definechangesauthor[name={surname-supervisor}, color=orange]{acronymus-supervisor}
+  \usepackage{todonotes}
+   \makeatletter
+    \setremarkmarkup{\todo[color=Changes@Color#1!20,size=\scriptsize]{#1: #2}} 
+   \makeatother  
+   \newcommand{\note}[2][]{\added[#1,remark={#2}]{}}   
+%---layout--
+\usepackage[top=2.5cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
+%---
+\usepackage[english,brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%--- font
+\usepackage{times}
+%--title formats -- layouts
+\usepackage[indentafter]{titlesec}
+  \setlength{\parindent}{2.5cm}
+% -- special numbering
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead[R]{\thepage}
+}  
+%--- level
+\setcounter{secnumdepth}{5}
+%---math options
+\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,textcomp}
+%---graphical options
+\usepackage[]{graphicx}
+%--table of contents options
+\usepackage{tocloft}
+  \renewcommand\cftsecafterpnum{\vskip14pt}
+  \renewcommand\cftsubsecafterpnum{\vskip14pt}
+  \usepackage[nottoc,notlof,notlot]{tocbibind} %print reference in toc 
+  \usepackage[titletoc,toc,page]{appendix}
+   \renewcommand{\appendixname}{Apêndice}
+   \renewcommand{\appendixtocname}{Apêndice}
+   \renewcommand{\appendixpagename}{Apêndice}
+%---hyperlinks
+  \usepackage{hyperref}
+   \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=green,
+              pdfauthor={Author name},
+              pdftitle={title-pdf},
+              pdfsubject={Theses},
+              pdfkeywords={Keyword1, Keyword2},
+              pdfproducer={Latex},
+              pdfcreator={pdflatex}}%              
+%
+\usepackage[portuguese]{nomencl}
+\renewcommand{\nomname}{Lista de Abreviaturas}
+ \makenomenclature
+%-- title pages
+\input{pretextuais}
+%--- Master document  
+
+ \begin{document}
+
+% seção de pretextuais de acordo com a norma da PPGQ
+
+  \folhaR
+  \folhaRR
+  \aprovacao
+  \catalografica
+  \dedicatoria
+  \agradecimento
+  \abreviatura
+  \tabelas
+  \figuras
+  \resumo
+  \abstracts %the word "abstract" is reserved
+  \sumario
+% fin da seção:  pretextuais  
+
+%--thesis--
+  \input{introducao}
+  \input{teoria}
+  \input{metodologia}
+  \input{resultados}
+  \input{apendices}
+  \bibliographystyle{ppgq}
+  \bibliography{referencias}
+%
+ \end{document}

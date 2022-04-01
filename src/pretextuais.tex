@@ -1,0 +1,149 @@
+%--author: Lozada-Blanco Asdrubal
+%"pretextuais"
+
+\newcommand{\instituto}{UNIVERSIDADE FEDERAL DE SÃO CARLOS}
+\newcommand{\centro}{CENTRO DE CIÊNCIAS EXATAS E DE TECNOLOGIA}
+\newcommand{\programa}{PROGRAMA DE PÓS-GRADUAÇÃO EM QUÍMICA}
+\newcommand{\departamento}{DEPARTAMENTO DE QUÍMICA}
+\newcommand{\nombre}{Nome Sobrenome}
+\newcommand{\orientador}{Prof. Dr. Nome sobrenome}
+\newcommand{\titulo}{\textbf{}}
+\newcommand{\cidade}{SÃO CARLOS - SP}
+\newcommand{\data}{2016}
+\newcommand{\bolsa}{Bolsita ?}
+
+% ---
+  \newcommand{\folhaR}{
+     \pagestyle{empty}
+   \begin{titlepage} 
+      \begin{center}
+      {\Large \instituto}\\
+      {\Large \centro}\\
+      {\Large \departamento}\\
+      {\Large \programa}\\
+      \par
+      \vspace{250pt}
+      {\large \titulo}
+      \par
+      \vspace{85pt}
+      \hspace*{250pt}\parbox{9.0cm}{{\Large \nombre}}
+      \vfill
+      {\large \cidade}\\
+      {\large \data}
+    \end{center}
+   \end{titlepage}
+  }
+% --
+  \newcommand{\folhaRR}{
+    \pagestyle{empty}
+    \begin{titlepage}
+     \begin{center}
+      {\Large \instituto}\\
+      {\Large \centro}\\
+      {\Large \departamento}\\
+      {\Large \programa}\\
+      \par
+      \vspace{180pt}
+      {\large \titulo}
+      \par
+      \vspace{60pt}
+      \hspace*{250pt}\parbox{9.0cm}{{\Large \nombre${\dagger}$}}
+      \par
+      \vspace{60pt}
+      \hspace*{150pt}\parbox{9.0cm}{{\large Tese apresentada como parte dos requisitos para obtenção do título de DOUTOR EM CIÊNCIAS, área de concentração: FÍSICO-QUÍMICA}} 
+      \par
+      \vspace{60pt}
+      \hspace*{0pt}\parbox{20.0cm}{{\large Orientador: \orientador}}
+      \par
+      \vspace{20pt}
+      \hspace*{0pt}\parbox{20.0cm}{{\large $\dagger$ \bolsa}}
+      \par
+      \vfill
+      {\large \cidade}\\
+      {\large \data}
+     \end{center}
+     \end{titlepage}
+  }
+ %--
+ \newcommand{\aprovacao}{
+   \newpage
+   \input{aprovacao.tex} %dummy
+ }
+ %---
+ \newcommand{\catalografica}{
+  \newpage
+  \input{catalografica.tex} %dummy
+ }
+ %--
+ \newcommand{\dedicatoria}{
+   \newpage
+    \vspace*{0.75\textheight}
+     \begin{flushright}
+      \emph{Ad nihil}
+     \end{flushright}     
+ }
+%--
+ \newcommand{\agradecimento}{
+   \newpage
+    \noindent{\Large\textbf{Agradecimentos}}
+    \vskip 2.0cm
+    \noindent Ao .. \\
+    \noindent À .. \\
+ }
+%--
+ \newcommand{\abreviatura}{
+   \newpage
+   \pagestyle{myheadings}
+    \pagenumbering{roman}
+    \setcounter{page}{7}
+
+     \input{nomenclatura}
+
+     \printnomenclature
+ }
+%--
+\newcommand{\tabelas}{
+  \newpage
+  \pagestyle{plain}
+   \pagenumbering{roman}
+   \setcounter{page}{8}
+   \listoftables}
+%--
+\newcommand{\figuras}{
+  \newpage
+  \listoffigures
+}
+%--   
+ \newcommand{\resumo}{
+   \newpage
+   \pagestyle{myheadings}
+   \pagenumbering{roman}
+   \setcounter{page}{10}
+   \markboth{}{}
+   \vspace*{10pt}
+   \begin{center}
+    \emph{\begin{large}Resumo\end{large}}\label{resumo}
+    \vspace{2pt}
+  \end{center} 
+  \input{resumo.tex}
+}
+  %--
+\newcommand{\abstracts}{
+  \newpage
+   \vspace*{10pt}
+   \begin{center}
+    \emph{\begin{large}Abstrac\end{large}}\label{abstract}
+    \vspace{2pt}
+  \end{center} 
+  \input{abstract.tex}
+   }
+ %--
+ \newcommand{\sumario}{
+  \newpage
+  \pagestyle{plain}
+   \pagenumbering{roman}
+   \setcounter{page}{12}
+   \tableofcontents
+ }
+
+
