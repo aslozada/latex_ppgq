@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # compile LaTex document
 # author: Lozada-Blanco Asdrubal
 
-file=$1
-book=$2
+
+file=$1  # master tex file
+book=$2  # bib file
 
 #clear
 rm $file.aux $file.bbl $file.blg
@@ -31,6 +32,3 @@ echo 'compile master document tex [Documento principal]'
 echo 'making pdf document [Documento final]'
 
 date
-
-okular $file.pdf
-
