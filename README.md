@@ -3,5 +3,9 @@
 
 ```bash compile <master-tex-file> <bib-file> ```
 
+or
+
+```make```
+
 
 **Contributions are welcome!**
